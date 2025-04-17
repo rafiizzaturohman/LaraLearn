@@ -18,19 +18,25 @@ class BarangSeeder extends Seeder
                 'kd_barang' => 'E001-03',
                 'nama' => 'Kipas Angin',
                 'harga' => 150000.00,
-                'stok' => 120
+                'stok' => 120,
+                'created_at'=>now(),
+                'updated_at'=>now()
             ],
             [
                 'kd_barang' => 'K002-01',
                 'nama' => 'Handphone',
                 'harga' => 4500000.00,
-                'stok' => 50
+                'stok' => 50,
+                'created_at'=>now(),
+                'updated_at'=>now()
             ],
             [
                 'kd_barang' => 'K002-02',
                 'nama' => 'Laptop Angin',
                 'harga' => 15000000.00,
-                'stok' => 20
+                'stok' => 20,
+                'created_at'=>now(),
+                'updated_at'=>now()
             ],
         ]);
     }
