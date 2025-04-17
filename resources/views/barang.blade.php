@@ -14,13 +14,14 @@
 <body class="bg-[#FDFDFC] dark:bg-[#0a0a0a]">
     <nav class="bg-gray-700 text-white font-bold py-4 px-[20rem]">
         <div class="flex flex-row justify-between items-center">
-            <a href="#" class="text-2xl">Barang</a>
+            <a href="/" class="text-2xl">Barang</a>
 
-            <div class="flex flex-row space-x-3 p-3 items-center bg-black rounded-xl ">
+            <div class="flex flex-row space-x-3 p-3 items-center font-semibold">
                 <a href="{{ route('login') }}"
-                    class="bg-white text-blue-700 px-4 py-1 rounded-md hover:text-white/70 hover:bg-blue-700 transition-all ease-in-out duration-300">Log
+                    class="hover:text-pink-500 tracking-wide font-semibold transition ease-in-out duration-600">Log
                     In</a>
-                <a href="{{ route('register') }}" class="hover:text-white/70 duration-300">Register</a>
+                <a href="{{ route('register') }}"
+                    class="hover:text-amber-500 tracking-wide font-semibold transition ease-in-out duration-600">Register</a>
             </div>
         </div>
     </nav>
@@ -29,8 +30,8 @@
 
         <div class="bg-gray-600 p-3 rounded-sm">
             <div class="relative overflow-x-auto">
-                <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <table class="w-full text-md text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                    <thead class="text-sm text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
                             <th scope="col" class="px-6 py-3">
                                 Kode Barang
@@ -50,25 +51,29 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
-                            <th scope="row"
-                                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                K001-01
-                            </th>
-                            <td class="px-6 py-4">
-                                Kipas Angin
-                            </td>
-                            <td class="px-6 py-4">
-                                2000000
-                            </td>
-                            <td class="px-6 py-4">
-                                20
-                            </td>
-                            <td class="px-6 py-4 space-x-2">
-                                <a href="#edit" class="hover:text-emerald-500 tracking-wide font-semibold transition ease-in-out duration-600">Edit</a>
-                                <a href="#delete" class="hover:text-red-500 tracking-wide font-semibold transition ease-in-out duration-600">Delete</a>
-                            </td>
-                        </tr>
+                        @foreach ($barangs as $item)
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+                                <th scope="row"
+                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    {{ $item->kd_barang }}
+                                </th>
+                                <td class="px-6 py-4">
+                                    {{ $item->nama }}
+                                </td>
+                                <td class="px-6 py-4">
+                                    {{ $item->harga }}
+                                </td>
+                                <td class="px-6 py-4">
+                                    {{ $item->stok }}
+                                </td>
+                                <td class="px-6 py-4 space-x-2">
+                                    <a href="#edit"
+                                        class="hover:text-emerald-500 tracking-wide font-semibold transition ease-in-out duration-600">Edit</a>
+                                    <a href="#delete"
+                                        class="hover:text-red-500 tracking-wide font-semibold transition ease-in-out duration-600">Delete</a>
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
