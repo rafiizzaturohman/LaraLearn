@@ -22,15 +22,15 @@ class BarangSeeder extends Seeder
             ],
             [
                 'kd_barang' => 'K002-01',
-                'nama' => 'Kipas Angin',
-                'harga' => 150000.00,
-                'stok' => 120
+                'nama' => 'Handphone',
+                'harga' => 4500000.00,
+                'stok' => 50
             ],
             [
                 'kd_barang' => 'K002-02',
-                'nama' => 'Kipas Angin',
-                'harga' => 150000.00,
-                'stok' => 120
+                'nama' => 'Laptop Angin',
+                'harga' => 15000000.00,
+                'stok' => 20
             ],
         ]);
     }
