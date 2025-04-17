@@ -26,7 +26,10 @@
         </div>
     </nav>
     <div class="mx-auto my-6 max-w-7xl space-y-8">
-        <h1 class="text-white font-bold text-2xl">Data Barang</h1>
+        <div class="flex flex-row justify-between items-center">
+            <h1 class="text-white font-bold text-2xl">Data Barang</h1>
+            <a href="#" class="text-white font-bold text-md hover:text-teal-500 transition ease-in-out duration-200">Tambah Barang</a>
+        </div>
 
         <div class="bg-gray-600 p-3 rounded-sm">
             <div class="relative overflow-x-auto">
