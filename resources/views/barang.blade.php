@@ -18,7 +18,7 @@
 
             <div class="flex flex-row space-x-3 p-3 items-center font-semibold">
                 <a href="{{ route('login') }}"
-                    class="hover:text-pink-500 tracking-wide font-semibold transition ease-in-out duration-600">Log
+                    class="hover:text-blue-300 tracking-wide font-semibold transition ease-in-out duration-600">Log
                     In</a>
                 <a href="{{ route('register') }}"
                     class="hover:text-amber-500 tracking-wide font-semibold transition ease-in-out duration-600">Register</a>
@@ -28,7 +28,7 @@
     <div class="mx-auto my-6 max-w-7xl space-y-8">
         <div class="flex flex-row justify-between items-center">
             <h1 class="text-white font-bold text-2xl">Data Barang</h1>
-            <a href="#" class="text-white font-bold text-md hover:text-teal-500 transition ease-in-out duration-200">Tambah Barang</a>
+            <a href="/tambahBarang" class="text-gray-200 font-bold text-md bg-gray-600 hover:text-gray-400 hover:bg-gray-800 transition ease-in-out duration-200 px-2 py-1 rounded-xs">Tambah Barang</a>
         </div>
 
         <div class="bg-gray-600 p-3 rounded-sm">
