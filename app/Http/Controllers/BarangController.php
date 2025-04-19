@@ -16,4 +16,8 @@ class BarangController extends Controller
     public function viewTambah() {
         return view('actions.tambah');
     }
+
+    public function viewEdit() {
+        return view('actions.edit');
+    }
 }
