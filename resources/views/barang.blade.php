@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
-    <title>Barang</title>
-</head>
-
-<body class="bg-[#FDFDFC] dark:bg-[#0a0a0a]">
+@extends('partials.header')
     <nav class="bg-gray-700 text-white font-bold py-4 px-[20rem]">
         <div class="flex flex-row justify-between items-center">
             <a href="/" class="text-2xl">Barang</a>
@@ -87,6 +74,5 @@
 
         </div>
     </div>
-</body>
 
-</html>
+@extends('partials.footer')
