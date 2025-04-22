@@ -15,4 +15,6 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('/barang', [BarangController::class, 'index'])->name('barang');
 
-Route::get('/tambahBarang', [BarangController::class, 'viewTambah'])->name('tambahBarang');
+Route::get('/barang/create', [BarangController::class, 'createView'])->name('store');
+
+Route::get('/barang/edit', [BarangController::class, 'editView'])->name('update');

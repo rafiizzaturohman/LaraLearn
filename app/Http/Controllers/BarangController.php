@@ -22,7 +22,7 @@ class BarangController extends Controller
     }
     
     public function editView() {
-        
+        return view('actions.edit');
     }
 
     public function update() {

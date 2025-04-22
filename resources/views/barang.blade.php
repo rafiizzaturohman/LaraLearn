@@ -15,7 +15,7 @@
     <div class="mx-auto my-6 max-w-7xl space-y-8">
         <div class="flex flex-row justify-between items-center">
             <h1 class="text-white font-bold text-2xl">Data Barang</h1>
-            <a href="/tambahBarang"
+            <a href="/barang/create"
                 class="text-gray-200 font-bold text-md bg-gray-600 hover:text-gray-400 hover:bg-gray-800 transition ease-in-out duration-200 px-2 py-1 rounded-xs">Tambah
                 Barang</a>
         </div>
