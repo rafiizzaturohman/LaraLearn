@@ -13,11 +13,23 @@ class BarangController extends Controller
         return view('barang', compact('barangs'));
     }
 
-    public function viewTambah() {
+    public function createView() {
         return view('actions.tambah');
     }
 
-    public function viewEdit() {
-        return view('actions.edit');
+    public function store() {
+
+    }
+    
+    public function editView() {
+        
+    }
+
+    public function update() {
+        
+    }
+
+    public function destroy() {
+            
     }
 }

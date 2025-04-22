@@ -1,7 +1,7 @@
 @extends('partials.header')
     <nav class="bg-gray-700 text-white font-bold py-4 px-[20rem]">
         <div class="flex flex-row justify-between items-center">
-            <a href="/" class="text-2xl">Barang</a>
+            <a href="/" class="text-2xl">Laravel</a>
 
             <div class="flex flex-row space-x-3 p-3 items-center font-semibold">
                 <a href="{{ route('login') }}"
@@ -43,20 +43,20 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($barangs as $item)
+                        @foreach ($barangs as $items)
                             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                                 <th scope="row"
                                     class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                    {{ $item->kd_barang }}
+                                    {{ $items->kd_barang }}
                                 </th>
                                 <td class="px-6 py-4">
-                                    {{ $item->nama }}
+                                    {{ $items->nama }}
                                 </td>
                                 <td class="px-6 py-4">
-                                    {{ $item->harga }}
+                                    {{ $items->harga }}
                                 </td>
                                 <td class="px-6 py-4">
-                                    {{ $item->stok }}
+                                    {{ $items->stok }}
                                 </td>
                                 <td class="px-6 py-4 space-x-2">
                                     <form onsubmit="return confirm('Apakah anda yakin?')" method="POST">
