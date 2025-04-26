@@ -15,7 +15,7 @@
     <div class="mx-auto my-6 max-w-7xl space-y-8">
         <div class="flex flex-row justify-between items-center">
             <h1 class="text-white font-bold text-2xl">Data Barang</h1>
-            <a href="/barang/create"
+            <a href="{{ route('createView') }}"
                 class="text-gray-200 font-bold text-md bg-gray-600 hover:text-gray-400 hover:bg-gray-800 transition ease-in-out duration-200 px-2 py-1 rounded-xs">Tambah
                 Barang</a>
         </div>
@@ -43,6 +43,7 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @csrf
                         @foreach ($barangs as $items)
                             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                                 <th scope="row"
@@ -58,20 +59,27 @@
                                 <td class="px-6 py-4">
                                     {{ $items->stok }}
                                 </td>
-                                <td class="px-6 py-4 space-x-2">
-                                    <form onsubmit="return confirm('Apakah anda yakin?')" method="POST">
-                                        <a href="#edit"
-                                            class="hover:text-emerald-500 tracking-wide font-semibold transition ease-in-out duration-600">Edit</a>
-                                        <button href="#delete"
-                                            class="hover:text-red-500 tracking-wide font-semibold transition ease-in-out duration-600">Delete</button>
+                                <td class="px-6 py-4 space-x-2 flex flex-row">
+                                    <form onsubmit="return confirm('Apakah anda yakin?')" action="{{ url('/barang/'. $items->id) }}" method="POST">
+                                        <a │href="#edit"
+                                        class="hover:text-emerald-500 tracking-wide font-semibold transition ease-in-out duration-600">Edit</a>
+                                        
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" id="{{ $items->id }}-delete-btn"
+                                            class="hover:text-red-500 tracking-wide font-semibold transition ease-in-out duration-600 cursor-pointer">Delete</button>
                                     </form>
                                 </td>
                             </tr>
                         @endforeach
                     </tbody>
                 </table>
+                @if (session('success'))
+                    <div class="my-4 text-center">
+                        <p class="font-semibold text-emerald-400 tracking-wide">{{ session('success') }}</p>
+                    </div>
+                @endif
             </div>
-
         </div>
     </div>
 

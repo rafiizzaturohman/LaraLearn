@@ -15,6 +15,10 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('/barang', [BarangController::class, 'index'])->name('barang');
 
-Route::get('/barang/create', [BarangController::class, 'createView'])->name('store');
+Route::get('/barang/createBarang', [BarangController::class, 'createView'])->name('createView');
+
+Route::post('/barang/create', [BarangController::class, 'store'])->name('store');
 
 Route::get('/barang/edit', [BarangController::class, 'editView'])->name('update');
+
+Route::delete('/barang/{id}', [BarangController::class, 'destroy']);
