@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class BarangController extends Controller
 {
     public function index() {
-        $barangs = Barang::all();
+        $barangs = Barang::all()->sortBy('kd_barang');
 
         return view('barang', compact('barangs'));
     }
@@ -38,12 +38,31 @@ class BarangController extends Controller
         return redirect()->route('barang')->with('success', 'Data berhasil ditambahkan');
     }
     
-    public function editView() {
-        return view('actions.edit');
+    public function editView($id) {
+        $barang = Barang::findOrFail($id);
+
+        return view('actions.edit', compact('barang'));
     }
 
-    public function update() {
-        
+    public function update(Request $request, $id) {
+        $validated = $request->validate([
+            'kd_barang' => 'required',
+            'nama' => 'required|max:150',
+            'harga' => 'required|numeric',
+            'stok' => 'required|numeric',
+        ]);
+
+        $barang = Barang::findOrFail($id);
+
+        $barang->update([
+            'kd_barang' => $validated['kd_barang'],
+            'nama' => $validated['nama'],
+            'harga' => $validated['harga'],
+            'stok' => $validated['stok'],
+            'updated_at' => now()
+        ]);
+
+        return redirect()->route('barang')->with('success', 'Data berhasil diubah');
     }
 
     public function destroy($id): RedirectResponse {

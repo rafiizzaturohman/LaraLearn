@@ -47,7 +47,7 @@
 
             </div>
 
-            <button class="my-2 px-2 py-1 rounded-md bg-teal-700 hover:bg-teal-600 transition ease-in-out duration-200 font-bold tracking-wide" type="submit">Tambah</button>
+            <button class="cursor-pointer my-2 px-2 py-1 rounded-md bg-teal-700 hover:bg-teal-600 transition ease-in-out duration-200 font-bold tracking-wide" type="submit">Tambah</button>
         </form>
     </div>
 </div>

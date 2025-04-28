@@ -48,7 +48,7 @@
                             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                                 <th scope="row"
                                     class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                    {{ $items->kd_barang }}
+                                    {{ $items->kd_barang }} 
                                 </th>
                                 <td class="px-6 py-4">
                                     {{ $items->nama }}
@@ -60,10 +60,10 @@
                                     {{ $items->stok }}
                                 </td>
                                 <td class="px-6 py-4 space-x-2 flex flex-row">
-                                    <form onsubmit="return confirm('Apakah anda yakin?')" action="{{ url('/barang/'. $items->id) }}" method="POST">
-                                        <a │href="#edit"
-                                        class="hover:text-emerald-500 tracking-wide font-semibold transition ease-in-out duration-600">Edit</a>
-                                        
+                                    <a href="{{ route('editView', $items->id) }}"
+                                    class="hover:text-emerald-500 tracking-wide font-semibold transition ease-in-out duration-600">Edit</a>
+                                    
+                                    <form onsubmit="return confirm('Apakah anda yakin?')" action="{{ route('destroy', $items->id) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" id="{{ $items->id }}-delete-btn"

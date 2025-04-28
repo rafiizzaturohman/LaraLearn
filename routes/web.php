@@ -19,6 +19,8 @@ Route::get('/barang/createBarang', [BarangController::class, 'createView'])->nam
 
 Route::post('/barang/create', [BarangController::class, 'store'])->name('store');
 
-Route::get('/barang/edit', [BarangController::class, 'editView'])->name('update');
+Route::get('/barang/{id}/edit', [BarangController::class, 'editView'])->name('editView');
 
-Route::delete('/barang/{id}', [BarangController::class, 'destroy']);
+Route::put('/barang/{id}', [BarangController::class, 'update'])->name('update');
+
+Route::delete('/barang/{id}', [BarangController::class, 'destroy'])->name('destroy');
