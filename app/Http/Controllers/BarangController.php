@@ -70,6 +70,6 @@ class BarangController extends Controller
 
         $barang->delete();
 
-        return redirect()->route('barang')->with('success', 'Data barang berhasil dihapus');
+        return redirect()->route('barang')->with(['success' => 'Data barang berhasil dihapus', 'failed' => 'Data barang gagal dihapus']);
     }
 }
