@@ -29,7 +29,7 @@
             
             <div class="flex flex-col my-2 space-y-2">
                 <label for="kd_barang" class="font-bold tracking-wider">Kode Barang</label>
-                <input type="text" class="border-b-2 border-[#7A8BA2] rounded-md px-2 py-1.5 focus:border-b-2 focus:border-white" name="kd_barang" id="kd_barang" required>
+                <input type="text" pattern="" class="border-b-2 border-[#7A8BA2] rounded-md px-2 py-1.5 focus:border-b-2 focus:border-white" name="kd_barang" id="kd_barang" required>
 
             </div>
             <div class="flex flex-col my-2 space-y-2">

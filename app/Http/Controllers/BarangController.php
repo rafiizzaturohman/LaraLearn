@@ -22,7 +22,7 @@ class BarangController extends Controller
     {
         $validated = $request->validate([
             'kd_barang' => 'required',
-            'nama' => 'required|max:150',
+            'nama' => 'required|max:20',
             'harga' => 'required|numeric',
             'stok' => 'required|numeric',
         ]);
@@ -47,7 +47,7 @@ class BarangController extends Controller
     public function update(Request $request, $id) {
         $validated = $request->validate([
             'kd_barang' => 'required',
-            'nama' => 'required|max:150',
+            'nama' => 'required|max:20',
             'harga' => 'required|numeric',
             'stok' => 'required|numeric',
         ]);
