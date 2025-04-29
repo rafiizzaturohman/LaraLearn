@@ -78,6 +78,10 @@
                     <div class="my-4 text-center">
                         <p class="font-semibold text-emerald-400 tracking-wide">{{ session('success') }}</p>
                     </div>
+                @else
+                    <div class="my-4 text-center">
+                        <p class="font-semibold text-emerald-400 tracking-wide">{{ session('failed') }}</p>
+                    </div>              
                 @endif
             </div>
         </div>

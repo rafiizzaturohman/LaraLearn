@@ -35,7 +35,7 @@ class BarangController extends Controller
             'created_at' => now()
         ]);
 
-        return redirect()->route('barang')->with('success', 'Data berhasil ditambahkan');
+        return redirect()->route('barang')->with(['success'=>'Data berhasil ditambahkan', 'failed'=>'Data gagal ditambahkan']);
     }
     
     public function editView($id) {
@@ -62,7 +62,7 @@ class BarangController extends Controller
             'updated_at' => now()
         ]);
 
-        return redirect()->route('barang')->with('success', 'Data berhasil diubah');
+        return redirect()->route('barang')->with(['success'=>'Data berhasil diubah', 'failed'=>'Data gagal diubah']);
     }
 
     public function destroy($id): RedirectResponse {
