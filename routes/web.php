@@ -24,3 +24,5 @@ Route::get('/barang/{id}/edit', [BarangController::class, 'editView'])->name('ed
 Route::put('/barang/{id}', [BarangController::class, 'update'])->name('update');
 
 Route::delete('/barang/{id}', [BarangController::class, 'destroy'])->name('destroy');
+
+// Route::resource('/blog', []);

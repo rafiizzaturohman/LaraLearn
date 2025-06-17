@@ -32,7 +32,7 @@ class BarangController extends Controller
             'nama' => $validated['nama'],
             'harga' => $validated['harga'],
             'stok' => $validated['stok'],
-            'created_at' => now()
+            'created_at' => now() 
         ]);
 
         return redirect()->route('barang')->with(['success'=>'Data berhasil ditambahkan', 'failed'=>'Data gagal ditambahkan']);
